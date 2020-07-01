@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="termproject" default="all">
+  
+  
+  <property file="termproject.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/*.rbc/**"/>
+    <exclude name="**/*.yarb/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/vssver.scc/**"/>
+    <exclude name="**/vssver2.scc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.war"/>
+    <include name="*.swc"/>
+    <include name="*.zip"/>
+    <include name="*.egg"/>
+    <include name="*.ane"/>
+    <include name="*.jar"/>
+    <include name="*.ear"/>
+    <include name="*.klib"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+    <exclude name="**/?*.aj"/>
+  </patternset>
+  
+  <property name="project.jdk.home" value=""/>
+  <property name="project.jdk.bin" value=""/>
+  <property name="project.jdk.classpath" value=""/>
+  
+  
+  <!-- Project Libraries -->
+  
+  <path id="library.dart_packages.classpath">
+    <pathelement location="C:/flutter/.pub-cache/hosted/pub.dartlang.org/archive-2.0.13/lib"/>
+    <pathelement location="C:/flutter/.pub-cache/hosted/pub.dartlang.org/args-1.6.0/lib"/>
+    <pathelement location="C:/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.4.1/lib"/>
+    <pathelement location="C:/flutter/.pub-cache/hosted/pub.dartlang.org/boolean_selector-2.0.0/lib"/>
+    <pathelement location="C:/flutter/.pub-cache/hosted/pub.dartlang.org/charcode-1.1.3/lib"/>
+    <pathelement location="C:/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.14.12/lib"/>
+    <pathelement location="C:/flutter/.pub-cache/hosted/pub.dartlang.org/convert-2.1.1/lib"/>
+    <pathelement location="C:/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-2.1.4/lib"/>
+    <pathelement location="C:/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-0.1.3/lib"/>
+    <pathelement location="C:/flutter/.pub-cache/hosted/pub.dartlang.org/image-2.1.12/lib"/>
+    <pathelement location="C:/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.6/lib"/>
+    <pathelement location="C:/flutter/.pub-cache/hosted/pub.dartlang.org/meta-1.1.8/lib"/>
+    <pathelement location="C:/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.6.4/lib"/>
+    <pathelement location="C:/flutter/.pub-cache/hosted/pub.dartlang.org/petitparser-2.4.0/lib"/>
+    <pathelement location="C:/flutter/.pub-cache/hosted/pub.dartlang.org/quiver-2.1.3/lib"/>
+    <pathelement location="C:/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.7.0/lib"/>
+    <pathelement location="C:/flutter/.pub-cache/hosted/pub.dartlang.org/stack_trace-1.9.3/lib"/>
+    <pathelement location="C:/flutter/.pub-cache/hosted/pub.dartlang.org/stream_channel-2.0.0/lib"/>
+    <pathelement location="C:/flutter/.pub-cache/hosted/pub.dartlang.org/string_scanner-1.0.5/lib"/>
+    <pathelement location="C:/flutter/.pub-cache/hosted/pub.dartlang.org/term_glyph-1.1.0/lib"/>
+    <pathelement location="C:/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.2.15/lib"/>
+    <pathelement location="C:/flutter/.pub-cache/hosted/pub.dartlang.org/typed_data-1.1.6/lib"/>
+    <pathelement location="C:/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.0.8/lib"/>
+    <pathelement location="C:/flutter/.pub-cache/hosted/pub.dartlang.org/xml-3.6.1/lib"/>
+    <pathelement location="C:/flutter/bin/cache/pkg/sky_engine/lib"/>
+    <pathelement location="C:/flutter/packages/flutter/lib"/>
+    <pathelement location="C:/flutter/packages/flutter_test/lib"/>
+  </path>
+  
+  <path id="library.dart_sdk.classpath">
+    <pathelement location="C:/flutter/bin/cache/dart-sdk/lib/async"/>
+    <pathelement location="C:/flutter/bin/cache/dart-sdk/lib/cli"/>
+    <pathelement location="C:/flutter/bin/cache/dart-sdk/lib/collection"/>
+    <pathelement location="C:/flutter/bin/cache/dart-sdk/lib/convert"/>
+    <pathelement location="C:/flutter/bin/cache/dart-sdk/lib/core"/>
+    <pathelement location="C:/flutter/bin/cache/dart-sdk/lib/developer"/>
+    <pathelement location="C:/flutter/bin/cache/dart-sdk/lib/ffi"/>
+    <pathelement location="C:/flutter/bin/cache/dart-sdk/lib/html"/>
+    <pathelement location="C:/flutter/bin/cache/dart-sdk/lib/indexed_db"/>
+    <pathelement location="C:/flutter/bin/cache/dart-sdk/lib/io"/>
+    <pathelement location="C:/flutter/bin/cache/dart-sdk/lib/isolate"/>
+    <pathelement location="C:/flutter/bin/cache/dart-sdk/lib/js"/>
+    <pathelement location="C:/flutter/bin/cache/dart-sdk/lib/js_util"/>
+    <pathelement location="C:/flutter/bin/cache/dart-sdk/lib/math"/>
+    <pathelement location="C:/flutter/bin/cache/dart-sdk/lib/mirrors"/>
+    <pathelement location="C:/flutter/bin/cache/dart-sdk/lib/svg"/>
+    <pathelement location="C:/flutter/bin/cache/dart-sdk/lib/typed_data"/>
+    <pathelement location="C:/flutter/bin/cache/dart-sdk/lib/wasm"/>
+    <pathelement location="C:/flutter/bin/cache/dart-sdk/lib/web_audio"/>
+    <pathelement location="C:/flutter/bin/cache/dart-sdk/lib/web_gl"/>
+    <pathelement location="C:/flutter/bin/cache/dart-sdk/lib/web_sql"/>
+  </path>
+  <!-- Register Custom Compiler Taskdefs -->
+  <property name="javac2.home" value="${idea.home}/lib"/>
+  <path id="javac2.classpath">
+    <fileset dir="${javac2.home}">
+      <include name="javac2.jar"/>
+      <include name="jdom.jar"/>
+      <include name="asm-all*.jar"/>
+      <include name="forms-*.jar"/>
+    </fileset>
+  </path>
+  <target name="register.custom.compilers">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
+    <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
+  </target>
+  
+  <!-- Modules -->
+  
+  <import file="${basedir}/term_project/module_term_project.xml"/>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.term_project" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.term_project" description="build all modules"/>
+  
+  <target name="all" depends="build.modules" description="build all"/>
+</project>
