@@ -11,7 +11,7 @@ class TwitterSignInButton extends StatelessWidget {
 
   /// Creates a new button. The default button text is 'Sign in with Twitter'.
   TwitterSignInButton(
-      {@required this.onPressed, this.text = 'Sign in with Twitter', Key key})
+      {@required this.onPressed, this.text = 'Log in with Twitter', Key key})
       : assert(text != null),
         super(key: key);
 
@@ -19,11 +19,11 @@ class TwitterSignInButton extends StatelessWidget {
   Widget build(BuildContext context) {
     // Twitter doesn't mandate a button size, so we match the Google button.
     return ButtonTheme(
-      height: 60.0,
+      height: 50.0,
       minWidth: 300,
       padding: const EdgeInsets.all(0.0),
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(5.0),
+        borderRadius: BorderRadius.circular(30.0),
         side: BorderSide(
           color: Color(0xFFE7E7E7),
         ),

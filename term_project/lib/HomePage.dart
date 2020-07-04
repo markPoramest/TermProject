@@ -22,17 +22,16 @@ class _MyMainPageState extends State<MyHomePage1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: new AppBar(
-          title: new Text(
-            "",
-            style: TextStyle(color: Colors.amber),
-          ),
-          backgroundColor: Colors.transparent,
-          elevation: 0.0,),
-        backgroundColor: color1,
-        body: SingleChildScrollView(
-            child: HomeBody()
-        )
+
+
+        body: Container(
+        decoration: BoxDecoration(
+        image: DecorationImage(
+         image: AssetImage("assets/images/background2.png"),
+         fit: BoxFit.cover,
+          ),),
+              child: HomeBody(),
+    )
 
     );
   }
